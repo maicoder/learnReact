@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSX</title>
+  <script src="../../reactjs/react.development.js"></script>
+  <script src="../../reactjs/react-dom.development.js"></script>
+  <script src="../../reactjs/babel.min.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+    let names = ['Alice', 'Emily', 'Kate'];
+
+    ReactDOM.render(
+      <div>
+      {
+        names.map(function (name, index) {
+          return <div key={index}>Hello, {name}!</div>
+        })
+      }
+      </div>,
+      document.getElementById('app')
+    );
+  </script>
+</body>
+</html>
