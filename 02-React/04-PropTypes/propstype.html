@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PropTypes</title>
+  <script src="../../reactjs/react.development.js"></script>
+  <script src="../../reactjs/react-dom.development.js"></script>
+  <script src="../../reactjs/babel.min.js"></script>
+  <script src="../../reactjs/prop-types.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+    let data = 123;
+
+    class MyTitle extends React.Component {
+      static propTypes = {
+        title: PropTypes.string.isRequired,
+      }
+
+      render() {
+        return <h1> {this.props.title} </h1>;
+      }
+    }
+
+    class OneTitle extends React.Component {
+      static defaultProps = {
+        title: 'Hello World',
+      }
+
+      render() {
+        return <h1> {this.props.title} </h1>;
+      }
+    };
+
+    // OneTitle.defaultProps = {
+    //   title: 'Hello World'
+    // }
+
+    ReactDOM.render(
+      // <MyTitle title={data} />,
+      <OneTitle />,
+      document.getElementById('app')
+    )
+  </script>
+</body>
+</html>
