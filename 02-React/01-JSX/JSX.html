@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSX</title>
+  <script src="../../reactjs/react.development.js"></script>
+  <script src="../../reactjs/react-dom.development.js"></script>
+  <script src="../../reactjs/babel.min.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+    let arr = [
+      <h1 key="1">Hello World!</h1>,
+      <h2 key="2">React is Awesome</h2>,
+    ];
+    ReactDOM.render(
+      <div>{arr}</div>,
+      document.getElementById('app')
+    )
+  </script>
+
+</body>
+</html>
