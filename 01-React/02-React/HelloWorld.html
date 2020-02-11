@@ -23,10 +23,20 @@
       return <h1>Hello, {props.name}</h1>
     }
 
-    const element = <Welcome name="World"/>;
-    
+    // const element = <Welcome name="World"/>;
+
+    function App() {
+      return (
+        <div>
+          <Welcome name="Kobe" />
+          <Welcome name="World" />
+          <Welcome name="Basketball" />
+        </div>
+      )
+    }
+
     ReactDOM.render(
-      element,
+      <App />,
       document.getElementById('app')
     )
   </script>
