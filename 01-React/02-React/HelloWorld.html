@@ -4,17 +4,31 @@
   <meta charset="UTF-8">
   <title>Hello World</title>
   <!-- Script tags including React -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
-  <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>-->
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>-->
+<!--  <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>-->
+  <script src="../../reactjs/react.development.js"></script>
+  <script src="../../reactjs/react-dom.development.js"></script>
+  <script src="../../reactjs/babel.min.js"></script>
 </head>
 <body>
   <div id="app"></div>
   <script type="text/babel">
+    // ReactDOM.render(
+    //   <h1>Hello World</h1>,
+    //   document.querySelector('#app')
+    // );
+
+    function Welcome(props) {
+      return <h1>Hello, {props.name}</h1>
+    }
+
+    const element = <Welcome name="World"/>;
+    
     ReactDOM.render(
-      <h1>Hello World</h1>,
-      document.querySelector('#app')
-    );
+      element,
+      document.getElementById('app')
+    )
   </script>
 </body>
 </html>
