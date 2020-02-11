@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajax</title>
+  <script src="../../reactjs/react.development.js"></script>
+  <script src="../../reactjs/react-dom.development.js"></script>
+  <script src="../../reactjs/babel.min.js"></script>
+  <script src="../../reactjs/jquery.min.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+    class UserGist extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          username: '',
+          lastGistUrl: ''
+        };
+      }
+
+      componentDidMount() {
+        $.get(this.props.source, function (result) {
+          let lastGist = result[0];
+          this.setState({
+            username: lastGist.owner.login,
+            lastGistUrl: lastGist.html_url
+          });
+        }.bind(this));
+      }
+
+      render() {
+        return (
+          <div>
+            {this.state.username}'s last gist is <a href={this.state.lastGistUrl}>here</a>.
+          </div>
+        );
+      }
+    }
+
+    ReactDOM.render(
+      <UserGist source="https://api.github.com/users/octocat/gists"/>,
+      document.getElementById('app')
+    )
+  </script>
+</body>
+</html>
