@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HelloReact</title>
+  <script src="../../reactjs/react.development.js"></script>
+  <script src="../../reactjs/react-dom.development.js"></script>
+  <script src="../../reactjs/babel.min.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+    function WarningBanner(props) {
+      if (!props.warn) {
+        return null;
+      }
+
+      return (
+        <div className="warning">
+          Warning!
+        </div>
+      );
+    }
+
+    class Page extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {showWarnng: true};
+        this.handleToggleClick = this.handleToggleClick.bind(this);
+      }
+
+      handleToggleClick() {
+        this.setState(state => ({
+          showWarnng: !state.showWarnng
+        }));
+      }
+
+      render() {
+        return (
+          <div>
+            <WarningBanner warn={this.state.showWarnng}/>
+            <button onClick={this.handleToggleClick}>
+              {this.state.showWarnng ? 'Hide' : 'Show'}
+            </button>
+          </div>
+        );
+      }
+    }
+
+    ReactDOM.render(
+      <Page/>,
+      document.getElementById('app')
+    )
+  </script>
+</body>
+</html>
