@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HelloReact</title>
+  <script src="../../reactjs/react.development.js"></script>
+  <script src="../../reactjs/react-dom.development.js"></script>
+  <script src="../../reactjs/babel.min.js"></script>
+  <style>
+    html, body, #app {
+      width: 100%;
+      height: 100%;
+    }
+
+    .SplitPane {
+      width: 100%;
+      height: 100%;
+    }
+
+    .SplitPane-left {
+      float: left;
+      width: 30%;
+      height: 100%;
+    }
+
+    .SplitPane-right {
+      float: left;
+      width: 70%;
+      height: 100%;
+    }
+
+    .Contacts {
+      width: 100%;
+      height: 100%;
+      background: lightblue;
+    }
+
+    .Chat {
+      width: 100%;
+      height: 100%;
+      background: pink;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+    function Contacts() {
+      return <div className="Contacts" />;
+    }
+
+    function Chat() {
+      return <div className="Chat" />;
+    }
+
+    function SplitPane(props) {
+      return (
+        <div className="SplitPane">
+          <div className="SplitPane-left">
+            {props.left}
+          </div>
+          <div className="SplitPane-right">
+            {props.right}
+          </div>
+        </div>
+      );
+    }
+
+    function App() {
+      return (
+        <SplitPane
+          left={
+            <Contacts />
+          }
+          right={
+            <Chat />
+          } />
+      );
+    }
+
+    ReactDOM.render(
+      <App />,
+      document.getElementById('app')
+    );
+
+  </script>
+</body>
+</html>
