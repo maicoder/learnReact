@@ -19,7 +19,10 @@ export default class Life extends React.Component{
   }
 
   render() {
-    return <div>
+    var style = {
+      padding: 10
+    }
+    return <div style={style}>
       <p>React 生命周期介绍</p>
       <button onClick={this.handleAdd}>点击一下</button>
       <button onClick={this.handleClick}>点击一下</button>
