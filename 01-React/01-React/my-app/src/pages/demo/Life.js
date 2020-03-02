@@ -19,7 +19,7 @@ export default class Life extends React.Component{
   }
 
   render() {
-    var style = {
+    let style = {
       padding: 10
     }
     return <div style={style}>
