@@ -15,7 +15,9 @@ export default class Life extends React.Component{
   }
 
   handleClick() {
-
+    this.setState({
+      count: this.state.count + 1
+    })
   }
 
   render() {
