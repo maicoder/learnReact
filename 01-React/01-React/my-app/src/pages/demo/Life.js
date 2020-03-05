@@ -1,4 +1,5 @@
 import React from "react";
+import Child from "./Child";
 
 export default class Life extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ export default class Life extends React.Component {
       <button onClick={this.handleAdd}>点击一下</button>
       <button onClick={this.handleClick.bind(this)}>点击一下</button>
       <p>{this.state.count}</p>
+      <Child name="Jack"></Child>
     </div>
   }
 }
