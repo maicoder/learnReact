@@ -1,0 +1,84 @@
+{
+  "status": 0,
+  "result": {
+    "location": {
+      "country": "中国",
+      "province": "吉林省",
+      "city": "延边朝鲜族自治州",
+      "name": "龙井",
+      "id": "222405"
+    },
+    "now": {
+      "text": "晴",
+      "temp": 13,
+      "feels_like": 14,
+      "rh": 21,
+      "wind_class": "1级",
+      "wind_dir": "西北风",
+      "uptime": "20200414202000"
+    },
+    "forecasts": [
+      {
+        "text_day": "晴",
+        "text_night": "晴",
+        "high": 24,
+        "low": 2,
+        "wc_day": "<3级",
+        "wd_day": "西风",
+        "wc_night": "<3级",
+        "wd_night": "东风",
+        "date": "2020-04-14",
+        "week": "星期二"
+      },
+      {
+        "text_day": "多云",
+        "text_night": "多云",
+        "high": 17,
+        "low": 1,
+        "wc_day": "<3级",
+        "wd_day": "东风",
+        "wc_night": "<3级",
+        "wd_night": "东风",
+        "date": "2020-04-15",
+        "week": "星期三"
+      },
+      {
+        "text_day": "多云",
+        "text_night": "多云",
+        "high": 13,
+        "low": 3,
+        "wc_day": "3~4级",
+        "wd_day": "东风",
+        "wc_night": "<3级",
+        "wd_night": "东风",
+        "date": "2020-04-16",
+        "week": "星期四"
+      },
+      {
+        "text_day": "多云",
+        "text_night": "多云",
+        "high": 13,
+        "low": 3,
+        "wc_day": "3~4级",
+        "wd_day": "东风",
+        "wc_night": "<3级",
+        "wd_night": "东风",
+        "date": "2020-04-17",
+        "week": "星期五"
+      },
+      {
+        "text_day": "晴",
+        "text_night": "晴",
+        "high": 18,
+        "low": 0,
+        "wc_day": "<3级",
+        "wd_day": "西风",
+        "wc_night": "<3级",
+        "wd_night": "东风",
+        "date": "2020-04-18",
+        "week": "星期六"
+      }
+    ]
+  },
+  "message": "success"
+}
