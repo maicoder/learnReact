@@ -7,6 +7,12 @@ export default class Axios {
         param: 'callback'
       }, function (err, response) {
         //todo
+        debugger;
+        if(response.status == 'success') {
+          resolve(response);
+        } else {
+          reject(response.message);
+        }
       })
     })
   }
