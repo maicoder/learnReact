@@ -5,6 +5,10 @@ import "./index.less";
 
 const { SubMenu } = Menu;
 
+function handleClick(e) {
+  console.log('click', e);
+}
+
 export default class NavLeft extends React.Component {
   // componentWillMount() {
   //   const menuTreeNode = this.renderMenu(menuConfig);
@@ -31,7 +35,11 @@ export default class NavLeft extends React.Component {
           </SubMenu>
         )
       }
-      return <Menu.Item title={item.title} key={item.key}>{item.title}</Menu.Item>
+      return (
+        <Menu.Item title={item.title} key={item.key}>
+          {item.title}
+        </Menu.Item>
+      )
     })
   }
 
@@ -44,7 +52,7 @@ export default class NavLeft extends React.Component {
           <h1>MS</h1>
         </div>
 
-        <Menu theme="dark" >
+        <Menu onClick={handleClick} theme="dark" >
           {this.state.menuTreeNode}
         </Menu>
 
