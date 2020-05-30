@@ -5,26 +5,28 @@ import "./index.less";
 
 const { SubMenu } = Menu;
 
-function handleClick(e) {
-  console.log('click', e);
-}
-
 export default class NavLeft extends React.Component {
   // componentWillMount() {
   //   const menuTreeNode = this.renderMenu(menuConfig);
   //   this.setState({menuTreeNode});
   // }
 
-  UNSAFE_componentWillMount() {
+  // UNSAFE_componentWillMount() {
+  //   const menuTreeNode = this.renderMenu(menuConfig);
+  //   this.setState({menuTreeNode});
+  // }
+
+  componentDidMount() {
     const menuTreeNode = this.renderMenu(menuConfig);
     this.setState({menuTreeNode});
   }
 
-  // constructor(props) {
-  //   super(props);
-  //   const menuTreeNode = this.renderMenu(menuConfig);
-  //   this.setState({menuTreeNode});
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuTreeNode: []
+    };
+  }
 
   renderMenu = (data) => {
     return data.map((item) => {
@@ -43,6 +45,10 @@ export default class NavLeft extends React.Component {
     })
   }
 
+  handleClick = (e) => {
+    console.log('click', e);
+  }
+
   render() {
     return (
       <div>
@@ -52,7 +58,7 @@ export default class NavLeft extends React.Component {
           <h1>MS</h1>
         </div>
 
-        <Menu onClick={handleClick} theme="dark" >
+        <Menu onClick={this.handleClick} theme="dark" >
           {this.state.menuTreeNode}
         </Menu>
 
