@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo</title>
+  <script src="../../reactjs/react.development.js"></script>
+  <script src="../../reactjs/react-dom.development.js"></script>
+  <script src="../../reactjs/babel.min.js"></script>
+  <script src="../../reactjs/jquery.min.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+
+    const todoList = ["图雀", "图雀写作工具", "图雀社区", "图雀文档"];
+
+    class Todo extends React.Component {
+      render() {
+        if (this.props.index % 2 === 0) {
+          return <li style={{ color: "red" }}>Hello, {this.props.content}</li>;
+        }
+
+        return <li>Hello, {this.props.content}</li>;
+      }
+    }
+
+    class App extends React.Component {
+      constructor(props) {
+        super(props);
+
+        this.state = {
+          nowTodo: "",
+          todoList: []
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
+
+      componentDidMount() {
+        this.timer = setTimeout(() => {
+          this.setState({todoList})
+        }, 2000)
+      }
+
+      componentWillUnmount() {
+        clearTimeout(this.timer);
+      }
+
+      handleChange(e) {
+        this.setState({
+          nowTodo: e.target.value
+        })
+      }
+
+      handleSubmit(e) {
+        e.preventDefault(e);
+        const newTodoList = this.state.todoList.concat(this.state.nowTodo);
+
+        this.setState({
+          todoList: newTodoList,
+          nowTodo: ""
+        });
+      }
+
+      render() {
+        return (
+          <div>
+            <form onSubmit={e => this.handleSubmit(e)}>
+              <input type="text" onChange={e=>this.handleChange(e)} />
+              <button type="submit">提交</button>
+            </form>
+            <ul>
+              {this.state.todoList.map((todo, index) => (
+                <Todo content={todo} key={index} index={index} />
+              ))}
+            </ul> 
+          </div> 
+        );
+      }
+    }
+
+    ReactDOM.render(<App />, document.getElementById('app'))
+  </script>
+</body>
+</html>
