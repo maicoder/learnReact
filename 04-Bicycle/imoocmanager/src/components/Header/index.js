@@ -6,19 +6,43 @@ import axios from "../../axios/";
 
 export default class Header extends React.Component {
 
-  state={}
+  constructor(props) {
+    super(props);
+    this.state = {
+      userName: "Hello, React",
+      sysTime: null
+    }
+  }
 
   UNSAFE_componentWillMount() {
-    this.setState(
-      {userName: "Hello,World"}
-    )
+    // this.setState(
+    //   {userName: "Hello,World"}
+    // )
 
-    setInterval(() => {
-      let sysTime = Util.formateDate(new Date().getTime());
-      this.setState({
-        sysTime
-      })
-    }, 1000)
+    // setInterval(() => {
+    //   let sysTime = Util.formateDate(new Date().getTime());
+    //   this.setState({
+    //     sysTime
+    //   })
+    // }, 1000)
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    let sysTime = Util.formateDate(new Date().getTime());
+    this.setState(
+      {sysTime}
+    )
   }
 
   getWeatherAPIData() {
