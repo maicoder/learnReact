@@ -80,7 +80,7 @@ const menuList = [
   {
     title: '订单管理',
     key: '/order',
-    btnList: [
+    children: [
       {
         title: '订单详情',
         key: '/order/detail'
