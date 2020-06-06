@@ -12,9 +12,7 @@ export default class Header extends React.Component {
       sysTime: null,
       weather: '',
       weather_icon: '',
-      temperature: '',
-      week: '',
-      wind: ''
+      temperature: ''
     }
   }
 
@@ -45,9 +43,7 @@ export default class Header extends React.Component {
         this.setState({
           weather: resJson.data[0].weather,
           weather_icon: resJson.data[0].weather_icon,
-          week: resJson.data[0].week,
-          temperature: resJson.data[0].temperature,
-          wind: resJson.data[0].wind
+          temperature: resJson.data[0].temperature
         })
       })
     })
@@ -66,13 +62,11 @@ export default class Header extends React.Component {
           <Col span={4} className="breadcrumb-title">首页</Col>
           <Col span={20} className="weather">
             <span className="date">{this.state.sysTime}</span>
-            <span className="week">{this.state.week}</span>
-            <span className="temperature">{this.state.temperature}</span>
             <span className="weather-icon">
               <img src={this.state.weather_icon} alt=""/>
             </span>
             <span className="weather-detail">{this.state.weather}</span>
-            <span className="wind">{this.state.wind}</span>
+            <span className="temperature">{this.state.temperature}</span>
           </Col>
         </Row>
       </div>
