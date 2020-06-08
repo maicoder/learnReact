@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Card, Spin, Icon, Alert } from 'antd';
 import './index.less';
 
-class Loading extends Component {
+class Loadings extends Component {
   render() {
     const icon = <Icon type="loading" style={{fontSize:"24px"}}></Icon>
     return (
@@ -30,4 +30,4 @@ class Loading extends Component {
   }
 }
 
-export default Loading;
+export default Loadings;
