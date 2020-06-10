@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "antd";
+import {Row, Col} from "antd";
 import "./index.less";
 import Util from "../../utils/utils";
 
@@ -40,11 +40,13 @@ export default class Header extends React.Component {
     const url = "https://api.66mz8.com/api/weather.php?location=杭州"
     fetch(url).then(res => {
       res.json().then(resJson => {
-        this.setState({
-          weather: resJson.data[0].weather,
-          weather_icon: resJson.data[0].weather_icon,
-          temperature: resJson.data[0].temperature
-        })
+        if(resJson.code === 200) {
+          this.setState({
+            weather: resJson.data[0].weather,
+            weather_icon: resJson.data[0].weather_icon,
+            temperature: resJson.data[0].temperature
+          })
+        }
       })
     })
   }
