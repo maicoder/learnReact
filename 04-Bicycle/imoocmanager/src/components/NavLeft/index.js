@@ -1,5 +1,6 @@
 import React from "react";
 import { Menu } from "antd";
+// import { NavLink } from "react-router-dom";
 import menuConfig from "../../config/menuConfig";
 import "./index.less";
 
@@ -7,16 +8,18 @@ const { SubMenu } = Menu;
 
 export default class NavLeft extends React.Component {
 
-  componentDidMount() {
-    const menuTreeNode = this.renderMenu(menuConfig);
-    this.setState({menuTreeNode});
-  }
-
   constructor(props) {
     super(props);
     this.state = {
       menuTreeNode: []
     };
+  }
+
+  componentDidMount() {
+    const menuTreeNode = this.renderMenu(menuConfig);
+    this.setState({
+      menuTreeNode: menuTreeNode
+    });
   }
 
   renderMenu = (data) => {
@@ -30,14 +33,12 @@ export default class NavLeft extends React.Component {
       }
       return (
         <Menu.Item title={item.title} key={item.key}>
-          {item.title}
+          {/*<NavLink to={item.key}>*/}
+            {item.title}
+          {/*</NavLink>*/}
         </Menu.Item>
       )
     })
-  }
-
-  handleClick = (e) => {
-    console.log('click', e);
   }
 
   render() {
@@ -49,7 +50,7 @@ export default class NavLeft extends React.Component {
           <h1>MS</h1>
         </div>
 
-        <Menu onClick={this.handleClick} theme="dark" >
+        <Menu theme="dark" mode="vertical">
           {this.state.menuTreeNode}
         </Menu>
 
