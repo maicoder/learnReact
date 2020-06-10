@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Card, Button, Radio } from 'antd';
+import React, {Component} from 'react';
+import {Card, Button, Radio} from 'antd';
 import './index.less';
 
 class Buttons extends Component {
@@ -30,7 +30,7 @@ class Buttons extends Component {
         </Card>
         <Card title="按钮组" className="Card">
           <Button.Group>
-            <Button type="primary" icon="left" style={{marginRight:"-2px"}}>返回</Button>
+            <Button type="primary" icon="left" style={{marginRight: "-2px"}}>返回</Button>
             <Button type="primary" icon="right">前进</Button>
           </Button.Group>
         </Card>
