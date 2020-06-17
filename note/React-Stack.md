@@ -8,12 +8,12 @@
 - ◎ custom React project to understand the underlying tools
 
 ### 🎈 状态管理
-- ◎  Local State: React's [useState](https://www.robinwieruch.de/react-usestate-hook), useReducer, useContext Hooks
-- ◎  Remote State via GraphQL: Apollo Client
-- ◎  Remote State via REST: React Hooks or Redux/MobX/Mobx State Tree
+- ◎  Local State: React's [useState](https://www.robinwieruch.de/react-usestate-hook), [useReducer](https://www.robinwieruch.de/react-usereducer-hook), [useContext Hooks](https://www.robinwieruch.de/react-usecontext-hook)
+- ◎  Remote State via GraphQL: [Apollo Client](https://www.robinwieruch.de/graphql-apollo-client-tutorial)
+- ◎  Remote State via REST: React Hooks or [Redux](https://www.robinwieruch.de/react-redux-tutorial)/[MobX](https://mobx.js.org/)/[Mobx State Tree](https://mobx-state-tree.js.org/)
 
 ### 🎈 路由管理
-- ◎  React Router
+- ◎  [React Router](https://github.com/ReactTraining/react-router)
 
 ### 🎈 样式库
 - ◎  CSS-in-CSS with CSS Modules
@@ -22,114 +22,114 @@
 
 ### 🎈 UI库
 - ◎  [Ant Design](https://ant.design/)
-- ◎  Chakra UI
-- ◎  Tailwind UI
-- ◎  Semantic UI
+- ◎  [Chakra UI](https://chakra-ui.com/)
+- ◎  [Tailwind UI](https://www.tailwindui.com/)
+- ◎  [Semantic UI](https://www.robinwieruch.de/react-semantic-ui-tutorial)
 - ◎  [Material UI](https://material-ui.com/zh/)
-- ◎  React Bootstrap
+- ◎  [React Bootstrap](https://react-bootstrap.github.io/)
 
 ### 🎈动画库
-- ◎  react-motion
-- ◎  react-spring
-- ◎  Framer Motion
-- ◎  Animated (React Native)
+- ◎  [react-motion](https://github.com/chenglou/react-motion)
+- ◎  [react-spring](https://github.com/react-spring/react-spring)
+- ◎  [Framer Motion](https://www.framer.com/motion/)
+- ◎  [Animated](https://facebook.github.io/react-native/docs/animated) (React Native)
 
 ### 🎈可视化和图表库
-- ◎  nivo
-- ◎  Victory
-- ◎  react-vis
-- ◎  Recharts
-- ◎  Chart Parts
--（ Easy 追加：echarts-for-react 也不错的 ）
+- ◎  [nivo](https://nivo.rocks/)
+- ◎  [Victory](https://formidable.com/open-source/victory/)
+- ◎  [react-vis](https://uber.github.io/react-vis/)
+- ◎  [Recharts](http://recharts.org/)
+- ◎  [Chart Parts](https://microsoft.github.io/chart-parts/)
+-（ Easy 追加：[echarts-for-react](https://github.com/hustcc/echarts-for-react) 也不错的 ）
 
 ### 🎈表单库
-- ◎  Formik
-- ◎  React Hook Form
+- ◎  [Formik](https://github.com/jaredpalmer/)
+- ◎  [React Hook Form](https://react-hook-form.com/)
 
 ### 🎈数据抓取库
-- ◎  the browser's native fetch API
-- ◎  axios
+- ◎  [the browser's native fetch API](https://developer.mozilla.org/en/docs/Web/API/Fetch_API)
+- ◎  [axios](https://github.com/mzabriskie/axios)
 - ◎  Apollo Client
 
 ### 🎈类型检查库
-- ◎  TypeScript
+- ◎  [TypeScript](https://www.typescriptlang.org/)
 
 ### 🎈代码规范
 - ◎  ESLint
-- ◎  Prettier
+- ◎  [Prettier](https://github.com/prettier/prettier)
 
 ### 🎈认证库
-- ◎  Firebase
-- ◎  Auth0
-- ◎  AWS Cognito
+- ◎  [Firebase](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/)
+- ◎  [Auth0](https://auth0.com/)
+- ◎  [AWS Cognito](https://aws.amazon.com/cognito/)
 
 ### 🎈Hosting
-- ◎  Digital Ocean
-- ◎  Netlify
-- ◎  Firebase Hosting
+- ◎  [Digital Ocean](https://m.do.co/c/fb27c90322f3)
+- ◎  [Netlify](https://www.netlify.com/)
+- ◎  [Firebase Hosting](https://firebase.google.com/docs/hosting)
 
 ### 🎈测试库
-- ◎  Unit/Integration/Snapshot Tests: Jest + React Testing Library
-- ◎  E2E Tests: Cypress
+- ◎  Unit/Integration/Snapshot Tests: [Jest](https://github.com/facebook/jest) + [React Testing Library](https://www.robinwieruch.de/react-testing-library)
+- ◎  E2E Tests: [Cypress](https://www.robinwieruch.de/react-testing-cypress)
 
 ### 🎈工具库
-- ◎  原生JavaScript
-- ◎  Lodash
+- ◎  [原生JavaScript](https://developer.mozilla.org/en/docs/Web/JavaScript)
+- ◎  [Lodash](https://lodash.com/)
 
 ### 🎈IMMUTABLE
-- ◎  Immer
+- ◎  [Immer](https://github.com/immerjs/immer)
 
 ### 🎈国际化库
-- ◎  react-i18next
-- ◎  react-intl
-- ◎  LinguiJS
-- ◎  FBT
+- ◎  [react-i18next](https://github.com/i18next/react-i18next)
+- ◎  [react-intl](https://github.com/formatjs/react-intl)
+- ◎  [LinguiJS](https://lingui.js.org/index.html)
+- ◎  [FBT](https://github.com/facebookincubator/fbt)
 
 ### 🎈编辑器库
-- ◎  Draft.js
-- ◎  Slate
+- ◎  [Draft.js](https://draftjs.org/)
+- ◎  [Slate](https://github.com/ianstormtaylor/slate)
 
 ### 🎈支付库
-- ◎  PayPal
-- ◎  Stripe Elements or Stripe Checkout
+- ◎  [PayPal](https://developer.paypal.com/docs/checkout/)
+- ◎  [Stripe Elements](https://github.com/stripe/react-stripe-elements) or [Stripe Checkout](https://stripe.com/docs/payments/checkout)
 
 ### 🎈时间日期库
-- ◎  Day.js
-- ◎  date-fns
-- ◎  moment.js
+- ◎  [Day.js](https://github.com/iamkun/dayjs)
+- ◎  [date-fns](https://github.com/date-fns/date-fns)
+- ◎  [moment.js](https://momentjs.com/)
 
 ### 🎈桌面应用库
-- ◎  Electron
-- ◎  NW.js
-- ◎  Neutralino.js
+- ◎  [Electron](https://www.electronjs.org/)
+- ◎  [NW.js](https://nwjs.io/)
+- ◎  [Neutralino.js](https://github.com/neutralinojs/neutralinojs)
  
 ### 🎈移动开发
-- ◎  React Native
-- ◎  React Native Web
+- ◎  [React Native](https://facebook.github.io/react-native/)
+- ◎  [React Native Web](https://github.com/necolas/react-native-web)
 
 ### 🎈VR/AR
-- ◎  React 360
-- ◎  react-viro
-- ◎  react-native-arkit
+- ◎  [React 360](https://facebook.github.io/react-360/)
+- ◎  [react-viro](https://www.npmjs.com/package/react-viro)
+- ◎  [react-native-arkit](https://github.com/react-native-ar/react-native-arkit)
 
 ### 🎈原型设计
-- ◎  figma
-- ◎  sketch
-- ◎  framer
+- ◎  [figma](https://www.figma.com/)
+- ◎  [sketch](https://www.sketch.com/)
+- ◎  [framer](https://www.framer.com/)
 
 ### 🎈文档写作
-- ◎  Styleguidist
-- ◎  docz
-- ◎  Docusaurus
+- ◎  [Styleguidist](https://react-styleguidist.js.org/)
+- ◎  [docz](https://www.docz.site/)
+- ◎  [Docusaurus](https://docusaurus.io/)
 
 ---
 
-- [echarts for react]()
+- [echarts for react](https://github.com/hustcc/echarts-for-react)
 - [recoiljs](https://recoiljs.org/)
-- [data fetch库 swr 和 react-query]()
-- [ rsuite](https://rsuitejs.com/)
-- [plotly 的 react-plotly](https://github.com/plotly/react-plotly.js/)
-- [可视化图表库：fabricJs、react-diagrams]()
-- [状态管理推荐dva]()
+- data fetch库 [swr](https://github.com/vercel/swr) 和 [react-query](https://github.com/tannerlinsley/react-query)
+- [rsuite](https://rsuitejs.com/)
+- plotly 的 [react-plotly](https://github.com/plotly/react-plotly.js/)
+- 可视化图表库：[fabricJs]()、[react-diagrams](https://github.com/projectstorm/react-diagrams)
+- 状态管理推荐 [dva](https://github.com/dvajs/dva)
 - [React Navigation](https://reactnavigation.org/)
-- [文档生成的dumi]()
+- 文档生成的 [dumi](https://github.com/umijs/dumi)
