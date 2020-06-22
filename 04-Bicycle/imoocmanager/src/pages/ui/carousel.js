@@ -7,9 +7,9 @@ class Carousels extends Component {
     return (
       <div>
         <Card title="文字背景轮播" className="Card">
-          <Carousel autoplay>
+          <Carousel autoplay={true}>
             <div>
-              <h3>2</h3>
+              <h3>1</h3>
             </div>
             <div>
               <h3>2</h3>
@@ -23,7 +23,7 @@ class Carousels extends Component {
           </Carousel>
         </Card>
         <Card title="文字背景轮播" className="Card">
-          <Carousel autoplay>
+          <Carousel autoplay={true}>
             <div>
               <h3><img src="/carousel-img/carousel-1.jpg" alt=""/></h3>
             </div>
