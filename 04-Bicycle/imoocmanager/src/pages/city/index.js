@@ -116,12 +116,15 @@ export default class City extends React.Component {
     ]
     return (
       <div>
+
         <Card>
           <FilterForm/>
         </Card>
+
         <Card style={{marginTop: 10}}>
           <Button type="primary" onClick={this.handleOpenCity}>开通城市</Button>
         </Card>
+
         <div className="content-wrap">
           <Table
             bordered
@@ -130,6 +133,7 @@ export default class City extends React.Component {
             pagination={this.state.pagination}
           />
         </div>
+
         <Modal
           title="开通城市"
           visible={this.state.isShowOpenCity}
