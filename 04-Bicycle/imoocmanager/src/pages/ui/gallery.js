@@ -23,6 +23,7 @@ class Gallery extends Component {
       ['16.png', '17.png', '18.png', '19.png', '20.png'],
       ['21.png', '22.png', '23.png', '24.png', '25.png'],
     ];
+
     const imgList = imgs.map( list => list.map(item => {
       return (
         <Card
@@ -35,6 +36,7 @@ class Gallery extends Component {
         </Card>
       )
     }) )
+
     return (
       <div>
         <Row>
