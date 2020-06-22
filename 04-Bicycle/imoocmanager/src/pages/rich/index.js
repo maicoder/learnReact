@@ -1,8 +1,10 @@
-import React from 'react'
-import {Button,Card,Modal} from 'antd'
-import { Editor } from 'react-draft-wysiwyg'
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
-import draftjs from 'draftjs-to-html'
+import React from 'react';
+import {Button,Card,Modal} from 'antd';
+import { Editor } from 'react-draft-wysiwyg';
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import draftjs from 'draftjs-to-html';
+import "./index.less";
+
 export default class RichText extends React.Component{
 
     state = {
@@ -46,6 +48,7 @@ export default class RichText extends React.Component{
                 <Card title="富文本编辑器">
                     <Editor
                         editorState={editorState}
+                        editorClassName="editor"
                         onContentStateChange={this.onEditorChange}
                         onEditorStateChange={this.onEditorStateChange}
                     />
