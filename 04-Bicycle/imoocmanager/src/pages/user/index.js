@@ -13,6 +13,7 @@ import {
   Modal,
   DatePicker
 } from 'antd';
+import { PlusOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import axios from '../../axios/index';
 import Utils from '../../utils/utils';
 import ETable from '../../components/ETable/index';
@@ -207,18 +208,18 @@ export default class User extends React.Component {
           </Form>
         </Card>
         <Card style={{marginTop: 10}}>
-          <Button type="primary" icon="plus"
+          <Button type="primary" icon={<PlusOutlined />}
                   onClick={() => this.handleOperator('create')}
           >
             创建员工
           </Button>
-          <Button icon="edit" onClick={() => this.handleOperator('edit')}>
+          <Button icon={<EditOutlined />} onClick={() => this.handleOperator('edit')}>
             编辑员工
           </Button>
           <Button onClick={() => this.handleOperator('detail')}>
             员工详情
           </Button>
-          <Button type="danger" icon="delete"
+          <Button type="danger" icon={<DeleteOutlined />}
                   onClick={() => this.handleOperator('delete')}
           >
             删除员工
