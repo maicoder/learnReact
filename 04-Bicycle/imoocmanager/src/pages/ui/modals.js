@@ -29,6 +29,7 @@ class Modals extends Component {
         <Modal
           title="React"
           visible={this.state.showModal1}
+          onOk={() => this.setState(() => ({showModal1:false}))}
           onCancel={() => this.setState(() => ({showModal1: false}))}
         >
           <h3>欢迎学习IMooc新推出的React高级课程</h3>
@@ -38,6 +39,7 @@ class Modals extends Component {
           visible={this.state.showModal2}
           okText="好的"
           cancelText="算了"
+          onOk={() => this.setState(() => ({showModal2: false}))}
           onCancel={() => this.setState(() => ({showModal2: false}))}
         >
           <h3>欢迎学习IMooc新推出的React高级课程</h3>
@@ -47,6 +49,7 @@ class Modals extends Component {
           visible={this.state.showModal3}
           okText="好的"
           cancelText="算了"
+          onOk={() => this.setState(() => ({showModal3: false}))}
           onCancel={() => this.setState(() => ({showModal3: false}))}
           style={{top: 20}}
         >
@@ -57,6 +60,7 @@ class Modals extends Component {
           visible={this.state.showModal4}
           okText="好的"
           cancelText="算了"
+          onOk={() => this.setState(() => ({showModal4: false}))}
           onCancel={() => this.setState(() => ({showModal4: false}))}
           wrapClassName="vertical-center-modal"
         >
