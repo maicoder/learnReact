@@ -91,7 +91,7 @@ class FormRegister extends React.Component {
               currentState: '2',
               interest: ['2', '5'],
               isMarried: true,
-              birthday: moment('2018-08-08'),
+              birthday: moment('2020-02-20'),
               address: '北京市海淀区奥林匹克公园',
               register: true
             }}
