@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EffectHook</title>
+    <script src="../reactjs/react16/react.development.js"></script>
+    <script src="../reactjs/react16/react-dom.development.js"></script>
+    <script src="../reactjs/react16/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      const { useState, UseEffect } = React;
+
+      function FriendStatus(props) {
+        const [isOnline, setIsOnline] = useState(null);
+
+        function handleStatusChange(status) {
+          setIsOnline(status.isOnline);
+        }
+
+        useEffect(() => {
+          ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+          return () => {
+            ChatAPI.unsubscribeToFriendStatus(
+              props.friend.id,
+              handleStatusChange
+            );
+          };
+        });
+
+        if (isOnline === null) {
+          return "loading...";
+        }
+        return isOnline ? "online" : "offline";
+      }
+
+      function useFriendStatus(friendID) {
+        const [isOnline, setIsOnline] = useState(null);
+
+        function handleStatusChange(status) {
+          setIsOnline(status.isOnline);
+        }
+
+        useEffect(() => {
+          ChatAPI.subscribeToFriendStatus(friendID, handleStatusChange);
+          return () => {
+            ChatAPI.unsubscribeToFriendStatus(friendID, handleStatusChange);
+          };
+        });
+
+        return isOnline;
+      }
+
+      ReactDOM.render(<FriendStatus />, document.getElementById("app"));
+    </script>
+  </body>
+</html>
