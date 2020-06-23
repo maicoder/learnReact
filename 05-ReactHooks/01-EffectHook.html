@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EffectHook</title>
+    <script src="../reactjs/react16/react.development.js"></script>
+    <script src="../reactjs/react16/react-dom.development.js"></script>
+    <script src="../reactjs/react16/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      const { useState, useEffect } = React;
+
+      function Example() {
+        const [count, setCount] = useState(0);
+
+        useEffect(() => {
+          document.title = `You Clicked ${count} times`;
+        });
+
+        return (
+          <div>
+            <p>You clicked {count} times</p>
+            <button
+              onClick={() => {
+                setCount(count + 1);
+              }}
+            >
+              Click Me
+            </button>
+          </div>
+        );
+      }
+
+      ReactDOM.render(
+          <Example />,
+          document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>
