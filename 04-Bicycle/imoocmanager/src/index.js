@@ -4,9 +4,15 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 // import Admin from "./admin";
 import Router from "./router";
+import { Provider } from 'react-redux';
+import configureStore from "./redux/store/configureStore";
+
+const store = configureStore();
 
 ReactDOM.render(
-  <Router />,
+  <Provider store={store}>
+    <Router />
+  </Provider>,
   document.getElementById('root')
 );
 
