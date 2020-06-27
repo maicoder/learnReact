@@ -17,9 +17,9 @@ class Admin extends React.Component {
           </Col>
           <Col span={21} className="main">
             <Header />
-            <Row className="content">
+            <div className="content">
               {this.props.children}
-            </Row>
+            </div>
             <Footer />
           </Col>
         </Row>
