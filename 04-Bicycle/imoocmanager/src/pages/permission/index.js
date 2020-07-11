@@ -355,7 +355,7 @@ class PermEditForm extends React.Component {
       console.log(parentKey + '-btn-' + item.key);
       btnTreeNode.push(
         <TreeNode title={item.title} key={parentKey + '-btn-' + item.key} className="op-role-tree"/>
-        );
+      );
     })
     return btnTreeNode;
   }
