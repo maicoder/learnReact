@@ -23,6 +23,7 @@
     "twbs-pagination": "^1.4.1"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
     "nodemon": "^2.0.4"
   }
 }
