@@ -17,6 +17,7 @@
     "font-awesome": "^4.7.0",
     "formidable": "^1.2.2",
     "jquery": "^3.5.1",
+    "mongoose": "^5.9.25",
     "nprogress": "^0.2.0",
     "nunjucks": "^3.2.1"
   },
